@@ -1,9 +1,9 @@
 {
-  "name": "dxp-lit-lib",
+  "name": "@moewes/dxp-lit-lib",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "repository": "git:github.com/moewes/dxp-lit-lib.git",
+  "repository": "git://github.com/moewes/dxp-lit-lib.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/moewes"
   },
