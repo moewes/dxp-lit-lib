@@ -31,9 +31,12 @@ jobs:
       env:
         CI: true
         NODE_AUTH_TOKEN: ${{ secrets.PACKAGE }}
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@3.5.7
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/master'
+      uses: qoomon/deploy-to-github-pages-action@v1
       with:
-        GITHUB_TOKEN: ${{ secrets.PACKAGE }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
+          GITHUB_PAGES_SOURCE_DIR: build # default value:  dist
+          GITHUB_PAGES_BRANCH: master # default value:  gh-pages
+          GITHUB_PAGES_REPLACE: false   # default value:  false
+          GITHUB_TOKEN: ${{ secrets.PACKAGE }}
