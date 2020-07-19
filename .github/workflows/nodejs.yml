@@ -33,6 +33,6 @@ jobs:
       uses: qoomon/deploy-to-github-pages-action@v1
       with:
           GITHUB_PAGES_SOURCE_DIR: build # default value:  dist
-          GITHUB_PAGES_BRANCH: master # default value:  gh-pages
+          GITHUB_PAGES_BRANCH: gh-pages # default value:  gh-pages
           GITHUB_PAGES_REPLACE: false   # default value:  false
           GITHUB_TOKEN: ${{ secrets.PACKAGE }}
